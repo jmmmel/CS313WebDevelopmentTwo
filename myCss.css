@@ -15,3 +15,13 @@ p:first-letter {
     padding-left: 3px; 
     font-family: Georgia; 
 }
+
+.panel-title{
+    background-color: blue;
+    color: white;
+}
+
+.bordered{
+    outline: solid black 1px;
+    margin-left: 30px;
+}
