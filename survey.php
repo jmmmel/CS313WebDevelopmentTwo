@@ -56,8 +56,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <div>
             <?php if ($_SESSION['voted'] == 'true')
                   { ?>
+                    <a href="Ideas.html">Go Back</a>
                   	<div class="alert alert-danger">You have already voted</div>
-             <?php } ?>
+             <?php } else
+                  {?>
+                    <a href="surveyOne.php">Go Back</a>
+                <?php } ?>
         </div>
         <div class="panel panel-default col-lg-5">
             <div class="panel-body">
