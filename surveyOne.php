@@ -2,7 +2,6 @@
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
-    var_dump($_SESSION);
     if(isset($_SESSION['voted']) && !empty($_SESSION['voted'])) {
         if ($_SESSION['voted'] == 'true'){
             header( 'Location: ./survey.php' ) ;
