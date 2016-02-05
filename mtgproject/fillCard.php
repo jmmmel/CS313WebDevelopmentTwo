@@ -19,9 +19,9 @@
         // In the openshift environment
         $host= getenv('OPENSHIFT_MYSQL_DB_HOST');
         $port= getenv('OPENSHIFT_MYSQL_DB_PORT');
-        $user= getenv('DB_USER_COMMMON');
-        $password= getenv('DB_USER_COMMON_PASS');
-        $dbname = getenv('DB_NAME');
+        $user= getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+        $password= getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+        $dbname = 'php'
         // …
     } 
     echo "<div>host: '$host' user: '$user' db: '$dbname'</div>";
