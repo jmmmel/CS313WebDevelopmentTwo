@@ -25,7 +25,7 @@
         // …
     } 
     echo "<div>host: '$host' user: '$user' db: '$dbname'</div>";
-    $con = new PDO("mysql:host=$host;dbname=$dbname", $user, $password)
+    $con = new PDO("mysql:host=$host:$port;dbname=$dbname", $user, $password)
         or die ('Could not connect to the database server');
 
     $fileString = file_get_contents("./AllCards.json");
