@@ -11,9 +11,9 @@
                     myDiv = document.getElementById("verify-fill");
                     myDiv.innerHTML = "Function Called";
                 },
-                error: function () {
+                error: function (jqXHR, textStatus, errorThrown ) {
                     myDiv = document.getElementById("verify-fill");
-                    myDiv.innerHTML = "Function FAiled";
+                    myDiv.innerHTML = "Function Failed : " + errorThrown;
                 }
             });
            
