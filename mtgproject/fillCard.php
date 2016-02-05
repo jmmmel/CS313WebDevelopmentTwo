@@ -3,6 +3,7 @@
 <head><title></title></head>
 <body>
     <?php
+    $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
     $host="";
     $port=0;
     $socket="";
