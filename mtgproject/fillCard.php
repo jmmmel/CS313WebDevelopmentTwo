@@ -36,8 +36,8 @@
     {
         $query = "INSERT INTO `php`.`card` (`Name`, `ConvertedManaCost`, `Cost`, `Type`, `RulesText`)"; 
         $query = $query."VALUES ('".$card['name']."', ";
-        if (isset($card['cmc']) && !empty($card['cmc'])){
-            $query = "'".$query.$card['cmc']."', '".$card['manaCost']."', '";
+        if (!((!isset($card['cmc']) || empty($card['cmc'])) && !($card['cmc'] == 0))){
+            $query = $query.$card['cmc'].", '".$card['manaCost']."', '";
         }
         else
         {
