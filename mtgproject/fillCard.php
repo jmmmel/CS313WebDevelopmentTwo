@@ -1,34 +1,35 @@
-<?php
-$host="";
-$port=0;
-$socket="";
-$user="";
-$password="";
-$dbname="";
-if ($openShiftVar === null || $openShiftVar == "")
-{
-    include("localUser.php");
-}
-else
-{
-    // In the openshift environment
-    $host= getenv('OPENSHIFT_MYSQL_DB_HOST');
-    $port= getenv('OPENSHIFT_MYSQL_DB_PORT');
-    $user= getenv('DB_USER_COMMMON');
-    $password= getenv('DB_USER_COMMON_PASS');
-    $dbname = getenv('DB_NAME');
-    // …
-} 
-$con = new PDO("mysql:host=$host;dbname=$dbname", $user, $password)
-	or die ('Could not connect to the database server');
 
-$fileString = file_get_contents("./AllCards.json");
-$card_json = json_decode($fileString, true);
-?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><title></title></head>
 <body>
-    <?
+    <?php
+    $host="";
+    $port=0;
+    $socket="";
+    $user="";
+    $password="";
+    $dbname="";
+    if ($openShiftVar === null || $openShiftVar == "")
+    {
+        include("localUser.php");
+    }
+    else
+    {
+        // In the openshift environment
+        $host= getenv('OPENSHIFT_MYSQL_DB_HOST');
+        $port= getenv('OPENSHIFT_MYSQL_DB_PORT');
+        $user= getenv('DB_USER_COMMMON');
+        $password= getenv('DB_USER_COMMON_PASS');
+        $dbname = getenv('DB_NAME');
+        // …
+    } 
+    echo "<div>host: '$host' user: '$user' db: '$dbname'</div>";
+    $con = new PDO("mysql:host=$host;dbname=$dbname", $user, $password)
+        or die ('Could not connect to the database server');
+
+    $fileString = file_get_contents("./AllCards.json");
+    $card_json = json_decode($fileString, true);
+    
     echo "<div>host: $host user: $user db: $dbname</div>";
     foreach ($card_json as $card)
     {
