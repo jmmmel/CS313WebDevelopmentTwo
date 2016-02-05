@@ -21,7 +21,7 @@
         $port= getenv('OPENSHIFT_MYSQL_DB_PORT');
         $user= getenv('OPENSHIFT_MYSQL_DB_USERNAME');
         $password= getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-        $dbname = 'php'
+        $dbname = 'php';
         // …
     } 
     echo "<div>host: '$host' user: '$user' db: '$dbname'</div>";
