@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script language="javascript">
+        function fillCardTable() {
+            $.ajax({
+                type: "GET",
+                url: "fillCard.php",
+                success: function () {
+                    myDiv = document.getElementById("verify-fill");
+                    myDiv.innerHTML = "Function Called";
+                },
+                error: function () {
+                    myDiv = document.getElementById("verify-fill");
+                    myDiv.innerHTML = "Function FAiled";
+                }
+            });
+           
+        }
+    </script>
+    <title>MTG Database</title>
+</head>
+<body>
+    <div id="verify-fill"></div>
+    <button onclick="fillCardTable()">Populate Card Database</button>
+</body>
+</html>
