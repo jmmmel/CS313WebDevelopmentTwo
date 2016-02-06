@@ -34,9 +34,9 @@
     echo "<div>host: $host user: $user db: $dbname</div>";
     foreach ($card_json as $card)
     {
-        $query = "INSERT INTO `php`.`Card` (`Name`, `ConvertedManaCost`, `Cost`, `Type`, `RulesText`)"; 
+        $query = "INSERT INTO `php`.`card` (`Name`, `ConvertedManaCost`, `Cost`, `Type`, `RulesText`)"; 
         $query = $query."VALUES ('".$card['name']."', ";
-        if (!((!isset($card['cmc']) || empty($card['cmc'])) && !($card['cmc'] == 0))){
+        if (array_key_exists('cmc', $card)){
             $query = $query.$card['cmc'].", '".$card['manaCost']."', '";
         }
         else
@@ -44,7 +44,7 @@
             $query = $query." null, null, '";
         }
         
-        if (isset($card['text']) && !empty($card['text'])){
+        if (array_key_exists('text',$card)){
             $query = $query.$card['type']."', '".$card['text']."')";
         }
         else
