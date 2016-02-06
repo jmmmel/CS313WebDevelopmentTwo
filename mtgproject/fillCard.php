@@ -53,7 +53,7 @@
         }
         echo "<div>$query</div>";
         $stmt = $con->exec($query);
-        echo "<div>".$con.errorInfo()."</div>";
+        
         
     }
     
