@@ -1,0 +1,14 @@
+﻿.notes {
+    white-space: normal;
+    -ms-word-wrap: hyphenate;
+    word-wrap: hyphenate;
+}
+
+.card-details{
+    text-align:right;
+}
+
+.left-label{
+    float:left;
+    text-align:left;
+}
