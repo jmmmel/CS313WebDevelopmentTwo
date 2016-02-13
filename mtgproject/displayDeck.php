@@ -1,4 +1,9 @@
+
 <?php
+session_start();
+if (session_status() == PHP_SESSION_NONE || !isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == 'false') {
+    header('Location: ./Login.php');
+}
 include("database.php");
 $query = 'SELECT d.DeckName, d.DeckNotes
           FROM deck d INNER JOIN user u ON d.UserId = u.UserId
@@ -20,7 +25,7 @@ $query = 'SELECT c.Name, c.ConvertedManaCost as Cmc, c.Cost, c.Type, c.RulesText
           AND d.DeckId=:deck_id';
 $statement = $db->prepare($query);
 #There will be a login step later.
-$statement->bindValue(':loggedInUserId', 1);
+$statement->bindValue(':loggedInUserId', $_SESSION['loggedUser']);
 $statement->bindValue(':deck_id', $_POST['deck_id']);
 $statement->execute();
 $cardsInDeck = $statement->fetchAll();
@@ -75,7 +80,15 @@ $statement->closeCursor();
                     <a href="index.php">Decks</a>
                 </li>
                 <li>
-                    <a href="#">Login/Logout (Doesn't Work)</a>
+                    <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == 'true'){
+                        echo "<a href='Login.php'>Logout</a>";
+                    }
+                    else
+                    {
+                        echo "<a href='Login.php'>Login</a>";
+                    }
+                    ?>
                 </li>
             </ul>
         </div>
@@ -85,19 +98,20 @@ $statement->closeCursor();
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="pull-left col-lg-12">
+                    <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
                             <i class="fa fa-bars"></i>
                         </a>
                     </div>
+                    <h1>Deck Details</h1>
                     <div class="col-lg-12">
                         <div class="panel panel-default col-lg-8">
-                            <div class="panel-heading col-lg-12"><?php echo $deckList['DeckName'];?></div>
+                            <div class="panel-heading col-lg-12 "><?php echo $deckList['DeckName'];?></div>
                             <div class="panel-body col-lg-12">
                                 <?php 
                                 foreach ($cardsInDeck as $card)
                                 {
-                                    echo "<div class='panel panel-default  col-lg-12 card-details'>";
+                                    echo "<div class='panel panel-default  col-lg-12 col-md-12 col-xs-12 card-details'>";
                                     echo "<div class='col-lg-12 card-details'><span class='left-label'>Name:</span>".$card['Name']." x ".$card['Count']."</div>"; 
                                     echo "<div class='col-lg-12 card-details'><span class='left-label'>Mana Cost:</span>".$card['Cost']."</div>"; 
                                     echo "<div class='col-lg-12 card-details'><span class='left-label'>Type:</span>".$card['Type']."</div>"; 

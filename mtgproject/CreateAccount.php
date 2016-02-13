@@ -1,19 +1,7 @@
 <?php
 session_start();
-if (session_status() == PHP_SESSION_NONE || !isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == 'false') {
-    header('Location: ./Login.php');
-}
-include("database.php");
-$query = 'SELECT d.DeckId, d.DeckName, d.DeckNotes
-          FROM deck d INNER JOIN user u ON d.UserId = u.UserId
-          WHERE u.UserId = :loggedInUserId';
-$statement = $db->prepare($query);
-#There will be a login step later.
-$statement->bindValue(':loggedInUserId', $_SESSION['loggedUser']);
-$statement->execute();
-$deckList = $statement->fetchAll();
-$statement->closeCursor();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,12 +30,7 @@ $statement->closeCursor();
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-        function routeToDeck(deckId) {
-            document.getElementById("deck-details").value = deckId;
-            document.getElementById("find-deck-form").submit();
-        }
-    </script>
+
 </head>
 
 <body>
@@ -58,7 +41,8 @@ $statement->closeCursor();
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="index.php">Magic Database
+                    <a href="index.php">
+                        Magic Database
                     </a>
                 </li>
                 <li>
@@ -70,40 +54,42 @@ $statement->closeCursor();
                 <li>
                     <?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == 'true'){
-                        echo "<a href='Login.php'>Logout</a>";
+                        echo "<a href='#'>Logout</a>";
                     }
                     else
                     {
-                        echo "<a href='Login.php'>Login</a>";
+                        echo "<a href='#'>Login</a>";
                     }
                     ?>
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12"><a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars"></i></a></div>
-                    <h1>Deck Collection</h1>
-                    <form id="find-deck-form" action="displayDeck.php" method="post">
-                        <div class="deck-display col-lg-12 notes">
-                            <?php foreach ($deckList as $deck){
-                                      echo "<div class='btn col-lg-5 col-md-6 col-xs-12 panel panel-default' onclick='routeToDeck(".$deck['DeckId'].")'>";
-                                      echo "<div class='panel-heading col-lg-12 notes'>";
-                                      echo $deck['DeckName'];
-                                      echo "</div>";
-                                      echo "<div class='panel-body col-lg-12'>";
-                                      echo "<label>Notes:</label>";
-                                      echo "<div class='notes col-lg-12'>".$deck['DeckNotes']."</div>";
-                                      echo "</div>";
-                                      echo "</div>";         
-                                  }?>
-                            <input id="deck-details" type="hidden" name="deck_id" value="" />
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-md-offset-4">
+                            <h1 class="text-center login-title">Create Account</h1>
+                            <div class="account-wall">
+                                <?php
+                                if(isset($_SESSION['alreadyUsed']) && $_SESSION['alreadyUsed'] == 'true'){
+                                    echo "<div class='has-error'>Username is already taken</div>";
+                                }
+                                ?>                                
+                                <form class="form-signin" method="post" action="AddAccount.php">
+                                    <input type="text" class="form-control" name="user" placeholder="Username" required autofocus>
+                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                        Create Account
+                                    </button>                                    
+                                </form>
+                            </div>
+                            <a href="Login.php" class="text-center new-account">Go back to signin</a>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,7 +97,6 @@ $statement->closeCursor();
 
     </div>
     <!-- /#wrapper -->
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
