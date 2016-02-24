@@ -4,11 +4,38 @@ if (session_status() == PHP_SESSION_NONE || !isset($_SESSION['loggedin']) || $_S
     header('Location: ./Login.php');
 }
 include("database.php");
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['action'])){
+        if ($_POST['action'] == "delete_deck"){
+            $query = 'DELETE FROM deckcontents
+                      WHERE DeckId = :deck_id';
+            $statement = $db->prepare($query);
+            $statement->bindValue(':deck_id', $_POST['deck_id']);
+            $statement->execute();
+            $statement->closeCursor();
+            $query = 'DELETE FROM deck
+                      WHERE DeckId = :deck_id';
+            $statement = $db->prepare($query);
+            $statement->bindValue(':deck_id', $_POST['deck_id']);
+            $statement->execute();
+            $statement->closeCursor();
+        }
+        if ($_POST['action'] == "add_deck"){
+            $query = "INSERT INTO deck (DeckName, DeckNotes, UserId)
+                      VALUES (:deck_name, :deck_notes, :user_id)";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':deck_name', $_POST['deck-name']);
+            $statement->bindValue(':deck_notes', $_POST['deck-notes']);
+            $statement->bindValue(':user_id', $_SESSION['loggedUser']);
+            $statement->execute();
+            $statement->closeCursor();
+        }
+    }
+}
 $query = 'SELECT d.DeckId, d.DeckName, d.DeckNotes
           FROM deck d INNER JOIN user u ON d.UserId = u.UserId
           WHERE u.UserId = :loggedInUserId';
 $statement = $db->prepare($query);
-#There will be a login step later.
 $statement->bindValue(':loggedInUserId', $_SESSION['loggedUser']);
 $statement->execute();
 $deckList = $statement->fetchAll();
@@ -48,6 +75,13 @@ $statement->closeCursor();
             document.getElementById("find-deck-form").submit();
         }
     </script>
+    <style>
+        .right{
+            text-align: right;
+            margin-right: 0px;
+            margin-left: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -89,10 +123,16 @@ $statement->closeCursor();
                     <div class="col-lg-12"><a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars"></i></a></div>
                     <h1>Deck Collection</h1>
                     <form id="find-deck-form" action="displayDeck.php" method="post">
+
                         <div class="deck-display col-lg-12 notes">
                             <?php foreach ($deckList as $deck){
                                       echo "<div class='btn col-lg-5 col-md-6 col-xs-12 panel panel-default' onclick='routeToDeck(".$deck['DeckId'].")'>";
                                       echo "<div class='panel-heading col-lg-12 notes'>";
+                                      echo "<form action='.' method='post' id='delete-deck-form'>";
+                                      echo "<input type='hidden' name='action' value='delete_deck'/>";
+                                      echo "<input type='hidden' name='deck_id' value='".$deck['DeckId']."'/>";
+                                      echo "<button type=\"submit\"><i class=\"fa fa-close\"></i></button>";
+                                      echo "</form>";
                                       echo $deck['DeckName'];
                                       echo "</div>";
                                       echo "<div class='panel-body col-lg-12'>";
@@ -104,7 +144,18 @@ $statement->closeCursor();
                             <input id="deck-details" type="hidden" name="deck_id" value="" />
                         </div>
                     </form>
+                    <form id="add-new-deck-form" action="." method="post">
+                        <input type="hidden" name="action" value="add_deck"/>
+                        <div class="col-lg-5 col-md-6 col-xs-12 panel panel-default">
+                            <div class="panel-body">
+                                <div class="col-lg-12"><label class="left-label">Deck Name: </label><input class="right" type="text" name="deck-name"/></div>
+                                <div class="col-lg-12"><label class="left-label">Notes: </label><input class="right" type="text" name="deck-notes"></div>
+                                <button type="submit" value="Add Deck">Add Deck</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
             </div>
         </div>
         <!-- /#page-content-wrapper -->

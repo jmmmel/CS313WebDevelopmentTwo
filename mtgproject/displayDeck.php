@@ -5,6 +5,33 @@ if (session_status() == PHP_SESSION_NONE || !isset($_SESSION['loggedin']) || $_S
     header('Location: ./Login.php');
 }
 include("database.php");
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['action'])){
+        if ($_POST['action'] == "delete_card"){
+            $query = 'DELETE FROM deckcontents
+                      WHERE DeckId = :deck_id AND CardId = :card_id';
+            $statement = $db->prepare($query);
+            $statement->bindValue(':deck_id', $_POST['deck_id']);
+            $statement->bindValue(':card_id', $_POST['card_id']);
+            $statement->execute();
+            $statement->closeCursor();
+        }
+        if ($_POST['action'] == "add_card"){
+            $query = "INSERT INTO deckcontents (DeckId, CardId, Count)
+                      VALUES (:deck_id
+                      , (SELECT c.CardId
+                         FROM card c
+                         WHERE c.Name=:card_name)
+                      , :count)";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':deck_id', $_POST['deck_id']);
+            $statement->bindValue(':card_name', $_POST['card_name']);
+            $statement->bindValue(':count', $_POST['card_count']);
+            $statement->execute();
+            $statement->closeCursor();
+        }
+    }
+}
 $query = 'SELECT d.DeckName, d.DeckNotes
           FROM deck d INNER JOIN user u ON d.UserId = u.UserId
           WHERE u.UserId = :loggedInUserId 
@@ -16,7 +43,7 @@ $statement->bindValue(':deck_id', $_POST['deck_id']);
 $statement->execute();
 $deckList = $statement->fetch();
 $statement->closeCursor();
-$query = 'SELECT c.Name, c.ConvertedManaCost as Cmc, c.Cost, c.Type, c.RulesText as Rules, dc.Count
+$query = 'SELECT c.CardId, c.Name, c.ConvertedManaCost as Cmc, c.Cost, c.Type, c.RulesText as Rules, dc.Count
           FROM card c 
           INNER JOIN deckcontents dc ON c.CardId = dc.CardId
           INNER JOIN deck d ON dc.DeckId = d.DeckId
@@ -24,7 +51,6 @@ $query = 'SELECT c.Name, c.ConvertedManaCost as Cmc, c.Cost, c.Type, c.RulesText
           WHERE u.UserId = :loggedInUserId 
           AND d.DeckId=:deck_id';
 $statement = $db->prepare($query);
-#There will be a login step later.
 $statement->bindValue(':loggedInUserId', $_SESSION['loggedUser']);
 $statement->bindValue(':deck_id', $_POST['deck_id']);
 $statement->execute();
@@ -112,6 +138,16 @@ $statement->closeCursor();
                                 foreach ($cardsInDeck as $card)
                                 {
                                     echo "<div class='panel panel-default  col-lg-12 col-md-12 col-xs-12 card-details'>";
+                                    ?>
+                                    <form action="displayDeck.php" method="post">
+                                        <input type="hidden" name="action" value="delete_card">
+                                        <?php
+                                        echo "<input type='hidden' name='card_id' value='".$card['CardId']."' />";
+                                        echo "<input type='hidden' name='deck_id' value='".$_POST['deck_id']."' />";
+                                        ?>
+                                        <button type="submit"><i class="fa fa-close"></i></button>
+                                    </form>
+                                    <?php
                                     echo "<div class='col-lg-12 card-details'><span class='left-label'>Name:</span>".$card['Name']." x ".$card['Count']."</div>"; 
                                     echo "<div class='col-lg-12 card-details'><span class='left-label'>Mana Cost:</span>".$card['Cost']."</div>"; 
                                     echo "<div class='col-lg-12 card-details'><span class='left-label'>Type:</span>".$card['Type']."</div>"; 
@@ -120,11 +156,25 @@ $statement->closeCursor();
                                 }
                                 ?>
                             </div>
+                            <div class="panel-footer">
+                                <form action="displayDeck.php" method="post">
+                                    <input type="hidden" name="action" value="add_card"/>
+                                <?php
+                                    echo "<input type='hidden' name='deck_id' value=".$_POST['deck_id']."/>";
+                                ?>
+                                    <div>
+                                        <label>Card Name:</label>
+                                        <input type="text" name="card_name"/>
+                                        <label>Quantity:</label>
+                                        <input type="number" name="card_count">
+                                        <button class="btn btn-default" type="submit" value="Add Card">Add Card</button>
+                                    </div>
 
+                                </form>
+                            </div>
+                            <div>
                         </div>
-                        <?php
 
-                            ?>
                     </div>
                 </div>
             </div>

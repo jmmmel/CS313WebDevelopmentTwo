@@ -1,6 +1,7 @@
 <?php    
 session_start();
 include("database.php");
+include("password.php");
 $query = 'SELECT UserId
           FROM user
           WHERE UserName=:user';
@@ -12,21 +13,20 @@ $statement->closeCursor();
 
 if(isset($user['UserId'])){
     $_SESSION['alreadyUsed'] = 'true';
-    var_dump($_SESSION);
     header('Location: ./CreateAccount.php');
 }
 else
 {
     $_SESSION['alreadyUsed'] = 'false';
     $_SESSION['failed'] = 'false';
+    $hashPassword = password_hash($_POST['password']);
     $query = 'INSERT INTO user (UserName, UserPass)
               VALUES (:user, :password)';
     $statement = $db->prepare($query);
     $statement->bindValue(':user', $_POST['user']);
-    $statement->bindValue(':password', $_POST['password']);
+    $statement->bindValue(':password', $hash);
     $statement->execute();
     $statement->closeCursor();
-    var_dump($_SESSION);
     header('Location: ./Login.php');
 }
 ?>

@@ -1,17 +1,18 @@
 <?php    
 session_start();
+include("password.php");
 include("database.php");
-$query = 'SELECT UserId
+$query = 'SELECT UserId, UserName, UserPass
           FROM user
-          WHERE UserName=:user and UserPass=:password';
+          WHERE UserName=:user';
 $statement = $db->prepare($query);
 $statement->bindValue(':user', $_POST['user']);
-$statement->bindValue(':password', $_POST['password']);
 $statement->execute();
 $user = $statement->fetch();
 $statement->closeCursor();
 
-if(isset($user['UserId'])){
+
+if(isset($user['UserPass']) && password_verify($_POST['password'],$user['UserPass'])){
     $_SESSION['loggedin'] = 'true';
     $_SESSION['failed'] = 'false';
     $_SESSION['loggedUser'] = $user['UserId'];

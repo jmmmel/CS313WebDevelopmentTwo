@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57ae2b3d-15ba-4d60-b0d5-24efc1df3131" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mtgproject/Login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Php.v12.suo" afterPath="$PROJECT_DIR$/Php.v12.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mtgproject/cardList.php" afterPath="$PROJECT_DIR$/mtgproject/cardList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mtgproject/AddAccount.php" afterPath="$PROJECT_DIR$/mtgproject/AddAccount.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mtgproject/CheckUser.php" afterPath="$PROJECT_DIR$/mtgproject/CheckUser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mtgproject/displayDeck.php" afterPath="$PROJECT_DIR$/mtgproject/displayDeck.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mtgproject/index.php" afterPath="$PROJECT_DIR$/mtgproject/index.php" />
     </list>
@@ -27,13 +28,36 @@
     <favorites_list name="php" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtgproject/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1538463">
-              <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateAccount.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtgproject/CreateAccount.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddAccount.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtgproject/AddAccount.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <folding>
+                <marker date="1455646362956" expanded="true" signature="87:151" placeholder="SELECT UserI..user..." />
+                <marker date="1455646362956" expanded="true" signature="582:659" placeholder="INSERT INTO user..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,10 +65,10 @@
       <file leaf-file-name="cardList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtgproject/cardList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="91" column="77" selection-start-line="91" selection-start-column="77" selection-end-line="91" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
               <folding>
-                <marker date="1454964454155" expanded="true" signature="88:234" placeholder="SELECT d.Dec..deck..." />
+                <marker date="1455354217395" expanded="true" signature="211:312" placeholder="SELECT c.Nam..card..." />
               </folding>
             </state>
           </provider>
@@ -53,6 +77,54 @@
       <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtgproject/database.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="displayDeck.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtgproject/displayDeck.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+              <folding>
+                <marker date="1456345239108" expanded="true" signature="350:442" placeholder="DELETE FROM ..." />
+                <marker date="1456345239108" expanded="true" signature="775:1022" placeholder="INSERT INTO deckcontents..." />
+                <marker date="1456345239108" expanded="true" signature="888:989" placeholder="SELECT c.Car..card..." />
+                <marker date="1456345239108" expanded="true" signature="1377:1546" placeholder="SELECT d.Dec..deck..." />
+                <marker date="1456345239108" expanded="true" signature="1811:2173" placeholder="SELECT c.Nam..card..." />
+                <marker date="1456345239108" expanded="true" signature="5911:5953" placeholder="..." />
+                <marker date="1456345239108" expanded="true" signature="7337:7456" placeholder="..." />
+                <marker date="1456345239108" expanded="true" signature="7900:7931" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mtgproject/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32399103">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+              <folding>
+                <marker date="1456345239110" expanded="true" signature="349:419" placeholder="DELETE FROM ..." />
+                <marker date="1456345239110" expanded="true" signature="349:421" placeholder="DELETE FROM ..." />
+                <marker date="1456345239110" expanded="true" signature="631:693" placeholder="DELETE FROM ..." />
+                <marker date="1456345239110" expanded="true" signature="637:686" placeholder="SELECT d.Dec..deck..." />
+                <marker date="1456345239110" expanded="true" signature="960:976" placeholder="INSERT INTO deck..." />
+                <marker date="1456345239110" expanded="true" signature="960:1071" placeholder="INSERT INTO deck..." />
+                <marker date="1456345239110" expanded="true" signature="960:1169" placeholder="INSERT INTO deck..." />
+                <marker date="1456345239110" expanded="true" signature="1437:1583" placeholder="SELECT d.Dec..deck..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="password.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtgproject/password.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -60,35 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="displayDeck.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mtgproject/displayDeck.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.596829">
-              <caret line="112" column="94" selection-start-line="112" selection-start-column="94" selection-end-line="112" selection-end-column="94" />
-              <folding>
-                <marker date="1454964689226" expanded="true" signature="89:258" placeholder="SELECT d.Dec..deck..." />
-                <marker date="1454964689226" expanded="true" signature="523:875" placeholder="SELECT c.Nam..card..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mtgproject/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-              <folding>
-                <marker date="1454964633124" expanded="true" signature="88:234" placeholder="SELECT d.Dec..deck..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="localUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mtgproject/localUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -105,8 +152,8 @@
       <list>
         <option value="$PROJECT_DIR$/mtgproject/Login.php" />
         <option value="$PROJECT_DIR$/mtgproject/cardList.php" />
-        <option value="$PROJECT_DIR$/mtgproject/index.php" />
         <option value="$PROJECT_DIR$/mtgproject/displayDeck.php" />
+        <option value="$PROJECT_DIR$/mtgproject/index.php" />
       </list>
     </option>
   </component>
@@ -120,9 +167,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1628" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -149,6 +197,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -183,8 +233,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,6 +256,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -231,24 +284,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1628" height="1047" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114764266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.096354164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -271,7 +324,94 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mtgproject/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1538463">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/CreateAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/AddAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <marker date="1455646362956" expanded="true" signature="87:151" placeholder="SELECT UserI..user..." />
+            <marker date="1455646362956" expanded="true" signature="582:659" placeholder="INSERT INTO user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/cardList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
+          <folding>
+            <marker date="1455354217395" expanded="true" signature="211:312" placeholder="SELECT c.Nam..card..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/displayDeck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <marker date="1456345239108" expanded="true" signature="350:442" placeholder="DELETE FROM ..." />
+            <marker date="1456345239108" expanded="true" signature="775:1022" placeholder="INSERT INTO deckcontents..." />
+            <marker date="1456345239108" expanded="true" signature="888:989" placeholder="SELECT c.Car..card..." />
+            <marker date="1456345239108" expanded="true" signature="1377:1546" placeholder="SELECT d.Dec..deck..." />
+            <marker date="1456345239108" expanded="true" signature="1811:2173" placeholder="SELECT c.Nam..card..." />
+            <marker date="1456345239108" expanded="true" signature="5911:5953" placeholder="..." />
+            <marker date="1456345239108" expanded="true" signature="7337:7456" placeholder="..." />
+            <marker date="1456345239108" expanded="true" signature="7900:7931" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1456345239110" expanded="true" signature="349:419" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="349:421" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="631:693" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="637:686" placeholder="SELECT d.Dec..deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:976" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:1071" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:1169" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="1437:1583" placeholder="SELECT d.Dec..deck..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/localUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
           <folding />
         </state>
@@ -279,15 +419,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mtgproject/cardList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
+        <state vertical-scroll-proportion="0.0">
           <caret line="91" column="77" selection-start-line="91" selection-start-column="77" selection-end-line="91" selection-end-column="77" />
           <folding>
-            <marker date="1454964454155" expanded="true" signature="88:234" placeholder="SELECT d.Dec..deck..." />
+            <marker date="1455354217395" expanded="true" signature="211:312" placeholder="SELECT c.Nam..card..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mtgproject/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/displayDeck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1456345239108" expanded="true" signature="350:442" placeholder="DELETE FROM ..." />
+            <marker date="1456345239108" expanded="true" signature="775:1022" placeholder="INSERT INTO deckcontents..." />
+            <marker date="1456345239108" expanded="true" signature="888:989" placeholder="SELECT c.Car..card..." />
+            <marker date="1456345239108" expanded="true" signature="1377:1546" placeholder="SELECT d.Dec..deck..." />
+            <marker date="1456345239108" expanded="true" signature="1811:2173" placeholder="SELECT c.Nam..card..." />
+            <marker date="1456345239108" expanded="true" signature="5911:5953" placeholder="..." />
+            <marker date="1456345239108" expanded="true" signature="7337:7456" placeholder="..." />
+            <marker date="1456345239108" expanded="true" signature="7900:7931" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+          <folding>
+            <marker date="1456345239110" expanded="true" signature="349:419" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="349:421" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="631:693" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="637:686" placeholder="SELECT d.Dec..deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:976" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:1071" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:1169" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="1437:1583" placeholder="SELECT d.Dec..deck..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/localUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -303,23 +485,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mtgproject/index.php">
+    <entry file="file://$PROJECT_DIR$/mtgproject/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/cardList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
           <folding>
-            <marker date="1454964633124" expanded="true" signature="88:234" placeholder="SELECT d.Dec..deck..." />
+            <marker date="1455354217395" expanded="true" signature="211:312" placeholder="SELECT c.Nam..card..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/CreateAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/AddAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <marker date="1455646362956" expanded="true" signature="87:151" placeholder="SELECT UserI..user..." />
+            <marker date="1455646362956" expanded="true" signature="582:659" placeholder="INSERT INTO user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mtgproject/displayDeck.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.596829">
-          <caret line="112" column="94" selection-start-line="112" selection-start-column="94" selection-end-line="112" selection-end-column="94" />
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
           <folding>
-            <marker date="1454964689226" expanded="true" signature="89:258" placeholder="SELECT d.Dec..deck..." />
-            <marker date="1454964689226" expanded="true" signature="523:875" placeholder="SELECT c.Nam..card..." />
+            <marker date="1456345239108" expanded="true" signature="350:442" placeholder="DELETE FROM ..." />
+            <marker date="1456345239108" expanded="true" signature="775:1022" placeholder="INSERT INTO deckcontents..." />
+            <marker date="1456345239108" expanded="true" signature="888:989" placeholder="SELECT c.Car..card..." />
+            <marker date="1456345239108" expanded="true" signature="1377:1546" placeholder="SELECT d.Dec..deck..." />
+            <marker date="1456345239108" expanded="true" signature="1811:2173" placeholder="SELECT c.Nam..card..." />
+            <marker date="1456345239108" expanded="true" signature="5911:5953" placeholder="..." />
+            <marker date="1456345239108" expanded="true" signature="7337:7456" placeholder="..." />
+            <marker date="1456345239108" expanded="true" signature="7900:7931" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtgproject/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32399103">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding>
+            <marker date="1456345239110" expanded="true" signature="349:419" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="349:421" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="631:693" placeholder="DELETE FROM ..." />
+            <marker date="1456345239110" expanded="true" signature="637:686" placeholder="SELECT d.Dec..deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:976" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:1071" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="960:1169" placeholder="INSERT INTO deck..." />
+            <marker date="1456345239110" expanded="true" signature="1437:1583" placeholder="SELECT d.Dec..deck..." />
           </folding>
         </state>
       </provider>
