@@ -126,13 +126,14 @@ $statement->closeCursor();
 
                         <div class="deck-display col-lg-12 notes">
                             <?php foreach ($deckList as $deck){
-                                      echo "<div class='btn col-lg-5 col-md-6 col-xs-12 panel panel-default' onclick='routeToDeck(".$deck['DeckId'].")'>";
-                                      echo "<div class='panel-heading col-lg-12 notes'>";
                                       echo "<form action='.' method='post' id='delete-deck-form'>";
                                       echo "<input type='hidden' name='action' value='delete_deck'/>";
                                       echo "<input type='hidden' name='deck_id' value='".$deck['DeckId']."'/>";
                                       echo "<button type=\"submit\"><i class=\"fa fa-close\"></i></button>";
                                       echo "</form>";
+                                      echo "<div class='btn col-lg-5 col-md-6 col-xs-12 panel panel-default' onclick='routeToDeck(".$deck['DeckId'].")'>";
+                                      echo "<div class='panel-heading col-lg-12 notes'>";
+
                                       echo $deck['DeckName'];
                                       echo "</div>";
                                       echo "<div class='panel-body col-lg-12'>";
